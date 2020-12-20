@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS PDF</title>
+    <link rel="stylesheet" href="styles/style.min.css">
 </head>
 
 <body>
-    <form id="form">
-        <input type="text" id="name" placeholder='Введите имя'>
-        <input type="text" id="surname" placeholder='Введите Фамилию'>
-        <button type="submit" id="button-submit">Создать PDF!</button>
-    </form>
 
-    <div id="preview-container">
-        
+    <div class="site-body">
+        <form id="form">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" placeholder='Введите имя' required>
+            <label for="surname">Ваша фамилия</label>
+            <input type="text" name="surname" placeholder="Ваша фамилия" id="surname" required>
+            <label for="company">В какой компании желаете работать?</label>
+            <input type="text" name="company" placeholder="В какой компании в хотите работать?" id="company" value="Dungeon" required>
+            <label for="bday">Когда вы родились?</label>
+            <input type="date" name="bday" id="bday" required>
+            <label for="coach" id="coach-label">Так как Вам меньше 14 лет, Вы должны указать своего тренера</label>
+            <input type="text" id="coach" name="coach" placeholder='Введите Имя Тренера' required>
+            <button type="submit" id="button-submit">Создать PDF!</button>
+        </form>
+    
+        <div id="preview-container">
+            
+        </div>
     </div>
-
 
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
     <script src="Roboto-Regular-normal.js"></script>
