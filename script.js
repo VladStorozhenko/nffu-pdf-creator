@@ -10,9 +10,7 @@ const checkBirthDay = (bday) => {
     const BirthDateFormat = +new Date(bday);
 
     let years = (Date.now() - BirthDateFormat) / 31557600000;
-
-    console.log(years);
-
+    
     if (years < 14) {
         coachBlock.style.display = "block";
         coachLabel.style.display = "block";

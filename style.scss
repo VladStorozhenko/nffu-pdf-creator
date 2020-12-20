@@ -44,3 +44,22 @@
         padding: 10px;
     }
 }
+
+@media (max-width: 1200px) {
+    .site-body {
+        flex-direction: column;
+        padding: 30px 0;
+        #preview-container {
+            padding-left: 0;
+            width: 100%;
+            margin-top: 20px;
+            .pdf-embed {
+                width: 100%;
+            }
+        }
+    }
+
+    #form {
+        width: 100%;
+    }
+}
